@@ -11,7 +11,7 @@ export default function MovieItem({ movie }) {
           draggable={false}
         />
         {movie.featured && (
-          <span className="movie-item__badge">Em destaque 2</span>
+          <span className="movie-item__badge">Em destaque</span>
         )}
       </header>
       <h4 className="movie-item__title">{movie.title}</h4>

@@ -15,16 +15,50 @@ body {
     "Segoe UI Symbol",
     "Noto Color Emoji";
   margin: 0;
+  background-color: #16181e;
 }
 
-.movies-list {
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar content content content"
+    "sidebar footer footer footer";
+}
+
+.container div {
+  padding: 10px;
+}
+
+#sidebar {
+  min-width: 200px;
+  grid-area: sidebar;
+  background-color: #21242d;
+}
+
+#header {
+  grid-area: header;
+}
+
+#content {
+  grid-area: content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  padding: 15px;
+  gap: 5px;
+  padding: 5px;
+  background-color: #16181e;
+}
+
+#footer {
+  grid-area: footer;
 }
 
 .movie-item {
+  margin: 1px;
+  border: 4px;
+  background-color: #e60b1c;
   position: relative;
 }
 
@@ -55,7 +89,7 @@ body {
   padding: 7px 10px;
   white-space: nowrap;
 }
-
+/*
 @media (max-width: 800px) {
   .movies-list {
     display: grid;
@@ -72,4 +106,4 @@ body {
     gap: 15px;
     padding: 15px;
   }
-}
+}*/
